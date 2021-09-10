@@ -4,14 +4,14 @@ var dog,dogImg,happyDogImg,foodStocks,database,foodS,firebase;
 function preload()
 {
 	//load images here
-  dogImg = loadImage("images/dogImg.png");
+  dogImg = loadImage("images/dog.png");
   happyDogImg = loadImage("images/dogImg1.png");
 }
 
 function setup() {
 	createCanvas(500,500);
   database = firebase.database();
-  foodStock = database.ref("Food");
+  foodStock = database.ref("Food")
   foodStock.on("value", readStock);
   foodStock.set(20);
   
